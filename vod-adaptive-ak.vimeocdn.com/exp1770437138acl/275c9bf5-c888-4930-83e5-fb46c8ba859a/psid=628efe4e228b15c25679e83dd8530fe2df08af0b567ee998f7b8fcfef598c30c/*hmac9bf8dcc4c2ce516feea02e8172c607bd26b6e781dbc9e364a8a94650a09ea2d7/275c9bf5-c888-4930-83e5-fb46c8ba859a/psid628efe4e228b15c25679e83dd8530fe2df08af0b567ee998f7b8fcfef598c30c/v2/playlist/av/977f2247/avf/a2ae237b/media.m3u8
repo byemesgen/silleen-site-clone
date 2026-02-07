@@ -1,0 +1,9 @@
+#EXTM3U
+#EXT-X-VERSION:6
+#EXT-X-MEDIA-SEQUENCE:0
+#EXT-X-TARGETDURATION:6
+#EXT-X-PLAYLIST-TYPE:VOD
+#EXT-X-MAP:URI="../../../../../range/prot/cmFuZ2U9MC02Nzc/avf/a2ae237b-a879-48d0-a8bf-d3c7a1554684.mp4?pathsig=8c953e4f~wwArZm30I5cSk_sJ6CT3xgyMAAc9TZTufJ-0rDFoRaI&r=dXM%3D&range=0-677"
+#EXTINF:6.016000,
+../../../../../range/prot/cmFuZ2U9NzIyLTE0NzY0NQ/avf/a2ae237b-a879-48d0-a8bf-d3c7a1554684.mp4?pathsig=8c953e4f~s1dAsWxxbIp8APKpof0dZHLnrkIp4WQRqs1WymHgQ-0&r=dXM%3D&range=722-147645
+#EXT-X-ENDLIST
