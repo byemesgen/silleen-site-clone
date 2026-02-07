@@ -1,0 +1,1 @@
+import{y as r,p as u,s as i,k as v,G as c,x as f}from"#entry";function l(n,o){const t=r(),e=()=>{const a=c(n);t.value=f.context(o,a)},s=()=>{t.value&&t.value.revert()};return u(e),i(()=>{v().hooks.hook("page:transition:finish",()=>{t.value&&t.value.revert()})}),{context:t,revert:s,start:e}}export{l as u};

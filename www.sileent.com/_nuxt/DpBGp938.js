@@ -1,0 +1,1 @@
+import{_ as o}from"./DlAUqK2U.js";import{c as t,o as n,R as s}from"#entry";const c={},_={class:"py-8 lg:py-17"};function r(e,a){return n(),t("section",_,[s(e.$slots,"default")])}const m=Object.assign(o(c,[["render",r]]),{__name:"Section"});export{m as _};

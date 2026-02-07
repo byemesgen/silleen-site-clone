@@ -1,0 +1,32 @@
+import{u as $,a as C}from"./DaGpothW.js";import{a5 as I,k as L,f as k,a6 as P,a7 as U,u as q}from"#entry";var g={kind:"Document",definitions:[{kind:"FragmentDefinition",name:{kind:"Name",value:"StrapiFile"},typeCondition:{kind:"NamedType",name:{kind:"Name",value:"UploadFile"}},directives:[],selectionSet:{kind:"SelectionSet",selections:[{kind:"Field",name:{kind:"Name",value:"alternativeText"},arguments:[],directives:[]},{kind:"Field",name:{kind:"Name",value:"height"},arguments:[],directives:[]},{kind:"Field",name:{kind:"Name",value:"width"},arguments:[],directives:[]},{kind:"Field",name:{kind:"Name",value:"url"},arguments:[],directives:[]},{kind:"Field",name:{kind:"Name",value:"mime"},arguments:[],directives:[]}]}}],loc:{start:0,end:86}};g.loc.source={body:`fragment StrapiFile on UploadFile {
+  alternativeText
+  height
+  width
+  url
+  mime
+}
+`,name:"GraphQL request",locationOffset:{line:1,column:1}};function p(e,n){if(e.kind==="FragmentSpread")n.add(e.name.value);else if(e.kind==="VariableDefinition"){var i=e.type;i.kind==="NamedType"&&n.add(i.name.value)}e.selectionSet&&e.selectionSet.selections.forEach(function(t){p(t,n)}),e.variableDefinitions&&e.variableDefinitions.forEach(function(t){p(t,n)}),e.definitions&&e.definitions.forEach(function(t){p(t,n)})}var h={};(function(){g.definitions.forEach(function(n){if(n.name){var i=new Set;p(n,i),h[n.name.value]=i}})})();function y(e,n){for(var i=0;i<e.definitions.length;i++){var t=e.definitions[i];if(t.name&&t.name.value==n)return t}}function A(e,n){var i={kind:e.kind,definitions:[y(e,n)]};e.hasOwnProperty("loc")&&(i.loc=e.loc);var t=h[n]||new Set,s=new Set,r=new Set;for(t.forEach(function(a){r.add(a)});r.size>0;){var u=r;r=new Set,u.forEach(function(a){if(!s.has(a)){s.add(a);var o=h[a]||new Set;o.forEach(function(m){r.add(m)})}})}return s.forEach(function(a){var o=y(e,a);o&&i.definitions.push(o)}),i}A(g,"StrapiFile");var v={kind:"Document",definitions:[{kind:"FragmentDefinition",name:{kind:"Name",value:"SEOMeta"},typeCondition:{kind:"NamedType",name:{kind:"Name",value:"ComponentSharedSeo"}},directives:[],selectionSet:{kind:"SelectionSet",selections:[{kind:"Field",name:{kind:"Name",value:"id"},arguments:[],directives:[]},{kind:"Field",name:{kind:"Name",value:"metaTitle"},arguments:[],directives:[]},{kind:"Field",name:{kind:"Name",value:"metaDescription"},arguments:[],directives:[]},{kind:"Field",name:{kind:"Name",value:"metaImage"},arguments:[],directives:[],selectionSet:{kind:"SelectionSet",selections:[{kind:"FragmentSpread",name:{kind:"Name",value:"StrapiFile"},directives:[]}]}},{kind:"Field",name:{kind:"Name",value:"metaSocial"},arguments:[],directives:[],selectionSet:{kind:"SelectionSet",selections:[{kind:"Field",name:{kind:"Name",value:"description"},arguments:[],directives:[]},{kind:"Field",name:{kind:"Name",value:"id"},arguments:[],directives:[]},{kind:"Field",name:{kind:"Name",value:"socialNetwork"},arguments:[],directives:[]},{kind:"Field",name:{kind:"Name",value:"title"},arguments:[],directives:[]},{kind:"Field",name:{kind:"Name",value:"image"},arguments:[],directives:[],selectionSet:{kind:"SelectionSet",selections:[{kind:"FragmentSpread",name:{kind:"Name",value:"StrapiFile"},directives:[]}]}}]}},{kind:"Field",name:{kind:"Name",value:"keywords"},arguments:[],directives:[]},{kind:"Field",name:{kind:"Name",value:"metaRobots"},arguments:[],directives:[]},{kind:"Field",name:{kind:"Name",value:"structuredData"},arguments:[],directives:[]},{kind:"Field",name:{kind:"Name",value:"metaViewport"},arguments:[],directives:[]},{kind:"Field",name:{kind:"Name",value:"canonicalURL"},arguments:[],directives:[]}]}}],loc:{start:0,end:319}};v.loc.source={body:`#import ./StrapiFile.gql
+
+fragment SEOMeta on ComponentSharedSeo {
+  id
+  metaTitle
+  metaDescription
+  metaImage {
+    ...StrapiFile
+  }
+  metaSocial {
+    description
+    id
+    socialNetwork
+    title
+    image {
+      ...StrapiFile
+    }
+  }
+  keywords
+  metaRobots
+  structuredData
+  metaViewport
+  canonicalURL
+}
+`,name:"GraphQL request",locationOffset:{line:1,column:1}};var D={};function Q(e){return e.filter(function(n){if(n.kind!=="FragmentDefinition")return!0;var i=n.name.value;return D[i]?!1:(D[i]=!0,!0)})}v.definitions=v.definitions.concat(Q(g.definitions));function S(e,n){if(e.kind==="FragmentSpread")n.add(e.name.value);else if(e.kind==="VariableDefinition"){var i=e.type;i.kind==="NamedType"&&n.add(i.name.value)}e.selectionSet&&e.selectionSet.selections.forEach(function(t){S(t,n)}),e.variableDefinitions&&e.variableDefinitions.forEach(function(t){S(t,n)}),e.definitions&&e.definitions.forEach(function(t){S(t,n)})}var F={};(function(){v.definitions.forEach(function(n){if(n.name){var i=new Set;S(n,i),F[n.name.value]=i}})})();function E(e,n){for(var i=0;i<e.definitions.length;i++){var t=e.definitions[i];if(t.name&&t.name.value==n)return t}}function V(e,n){var i={kind:e.kind,definitions:[E(e,n)]};e.hasOwnProperty("loc")&&(i.loc=e.loc);var t=F[n]||new Set,s=new Set,r=new Set;for(t.forEach(function(a){r.add(a)});r.size>0;){var u=r;r=new Set,u.forEach(function(a){if(!s.has(a)){s.add(a);var o=F[a]||new Set;o.forEach(function(m){r.add(m)})}})}return s.forEach(function(a){var o=E(e,a);o&&i.definitions.push(o)}),i}V(v,"SEOMeta");async function W(e,n,i){const{locale:t}=$(),s=I(),r=L(),u=U(),a=await C(e,n,{...i,locale:t.value,status:"PUBLISHED"},{watch:[t]}),o=k(()=>{if(a.data.value?.content)return Array.isArray(a.data.value.content)?a.data.value.content[0]:a.data.value.content});a.status.value==="success"&&!o.value&&r.runWithContext(()=>P("/",{}));const m=k(()=>{const{seo:c,...d}=o.value||{};return d}),R=k(()=>(o.value?.localizations||[]).reduce((c,d)=>({...c,[d.locale]:{slug:d.slug}}),{})),w=k(()=>{if(!o.value?.seo)return{};const{metaTitle:c,metaDescription:d,metaImage:N,metaSocial:b,metaRobots:T,keywords:x}=o.value.seo,O=b.map(f=>{let l=null;switch(f.socialNetwork){case"Facebook":l="og";break;case"Twitter":l="twitter";break}return l?[{property:`${l}:title`,content:f.title||c},{property:`${l}:description`,content:f.description||d},{property:`${l}:image`,content:u.public.strapiURL+(f.image||N)?.url},{property:`${l}:image:alt`,content:(f.image||N)?.alternativeText||c}]:[]});return{title:c,meta:[{name:"description",content:d},{name:"robots",content:T},{name:"keywords",content:x},{property:"twitter:card",content:"summary_large_image"},...O.flat()]}});return r.runWithContext(()=>q(w.value)),r.runWithContext(()=>s(R.value)),{content:m,seo:w,data:a.data,error:a.error,status:a.status}}export{g as a,v as d,W as u};
